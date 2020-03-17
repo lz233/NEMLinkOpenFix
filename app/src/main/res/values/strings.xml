@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NetEase Music</string>
+    <string name="error_parse">Failed to parse url</string>
+    <string name="error_open">Failed to open NetEase Music</string>
+</resources>
