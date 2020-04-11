@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
             //https://music.163.com/#/song?id=34324546&userid=
             //https://music.163.com/m/song?id=32526708&userid=
             //http://music.163.com/song/32526708/?userid=
+            //https://music.163.com/song?id=32166117
             try {
                 String fragment;
                 if ("/".equals(path) && (fragment = data.getFragment()) != null) {
@@ -40,6 +41,12 @@ public class MainActivity extends Activity {
                     if (!TextUtils.isEmpty(type) && !TextUtils.isEmpty(data.getQueryParameter("id"))) {
                         startNEM(type, data.getQueryParameter("id"));
                     }
+                } else if (path.split("/", -1).length - 1 == 1) {
+                    String type = path.substring(1);
+                    if (!TextUtils.isEmpty(type) && !TextUtils.isEmpty(data.getQueryParameter("id"))) {
+                        startNEM(type, data.getQueryParameter("id"));
+                    }
+                    startNEM(path.substring(1), data.getQueryParameter("id"));
                 } else {
                     Pattern r = Pattern.compile("/(.*)/(\\d+)");
                     Matcher m = r.matcher(path);
