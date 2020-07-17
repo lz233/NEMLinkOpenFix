@@ -20,5 +20,3 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -repackageclasses ''
--allowaccessmodification
--optimizationpasses 9
