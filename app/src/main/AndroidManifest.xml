@@ -22,6 +22,12 @@
                 <data
                     android:host="music.163.com"
                     android:scheme="https" />
+                <data
+                    android:host="y.music.163.com"
+                    android:scheme="http" />
+                <data
+                    android:host="y.music.163.com"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
     </application>
